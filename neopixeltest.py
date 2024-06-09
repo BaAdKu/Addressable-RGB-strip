@@ -18,3 +18,5 @@ while x<300:
 time.sleep(4)
 
 pixel1.fill((0,0,0))
+
+pixel1.disp
