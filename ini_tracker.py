@@ -17,7 +17,7 @@ pixel1.show()
 i=0
 
 while True:
-    if input()!='c':
+    if input()=='c':
         break
     pixel1.fill(0x202020)
     pixel1.show()
