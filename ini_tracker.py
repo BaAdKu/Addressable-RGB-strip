@@ -5,7 +5,7 @@ import neopixel
 pixel1=neopixel.NeoPixel(board.D18, 300, brightness=0.2, auto_write= False)
 char_num=int(input("Please enter the number of players"))
 i=0
-char_order=int[0]*char_num
+char_order=[0]*char_num
 while i<char_num:
     print("enter the next person by their number") 
     char_order[i]=int(input())
