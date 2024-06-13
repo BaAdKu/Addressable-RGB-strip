@@ -24,6 +24,7 @@ while True:
     j=int((char_order[i]-1)*(300/char_num))
     while j<(char_order[i]*(300/char_num)):
         pixel1[j]=(00, 221, 00)
+        pixel1[j+int(300/char_num)]=(221, 221, 0)
         j+=1
     pixel1.show()
     i+=1
