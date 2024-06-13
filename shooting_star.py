@@ -31,7 +31,7 @@ while x<300:
     pixel1.show()
 
     # print("one step")
-    time.sleep(0.002)
+    time.sleep(0.006)
 
 time.sleep(4)
 pixel1.fill((30, 0, 80))
