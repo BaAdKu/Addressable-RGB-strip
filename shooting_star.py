@@ -2,11 +2,12 @@ import time
 import board
 import neopixel
 
-pixel1=neopixel.NeoPixel(board.D18, 300, brightness=0.2)
+pixel1=neopixel.NeoPixel(board.D18, 300, brightness=0.2, auto_write= False)
 
 x=0
 
 pixel1.fill((30, 0, 80))
+pixel1.show()
 
 while x<300: 
     pixel1[x]=(105, 85, 127)
@@ -30,7 +31,7 @@ while x<300:
     pixel1.show()
 
     # print("one step")
-    # time.sleep(0.03)
+    time.sleep(0.002)
 
 time.sleep(4)
 pixel1.fill((30, 0, 80))
