@@ -21,7 +21,7 @@ while True:
         break
     pixel1.fill(0x202020)
     pixel1.show()
-    j=(char_order[i]-1)*(300/char_num)
+    j=int((char_order[i]-1)*(300/char_num))
     while j<(char_order[i]*(300/char_num)):
         pixel1[j]=(00, 221, 00)
         j+=1
