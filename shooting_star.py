@@ -27,7 +27,9 @@ while x<300:
     pixel1[x-15]=(32, 3, 81)
     pixel1[x-16]=(30, 0, 80)
     x+=1
-    print("one step")
+    pixel1.show()
+
+    # print("one step")
     # time.sleep(0.03)
 
 time.sleep(4)
