@@ -28,7 +28,7 @@ while x<300:
     pixel1[x-16]=     (30, 0, 80)
     
     x+=1
-    time.sleep(0.07)
+    time.sleep(0.03)
 
 time.sleep(4)
 pixel1.fill((30, 0, 80))
