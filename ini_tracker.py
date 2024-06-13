@@ -23,7 +23,7 @@ while True:
     pixel1.show()
     j=(char_order[i]-1)*(300/char_num)
     while j<(char_order[i]*(300/char_num)):
-        pixel1[j]=0x00dd00
+        pixel1[j]=(0x00dd00)
         j+=1
     pixel1.show()
 
