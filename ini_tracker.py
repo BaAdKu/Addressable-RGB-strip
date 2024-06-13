@@ -26,7 +26,9 @@ while True:
         pixel1[j]=(00, 221, 00)
         j+=1
     pixel1.show()
-
+    i+=1
+    if i==char_num:
+        i=0
 
 pixel1.fill(0x000000)
 pixel1.show()
