@@ -19,15 +19,23 @@ i=0
 while True:
     if input()=='c':
         break
+    
     pixel1.fill(0x202020)
     pixel1.show()
+
     j=int((char_order[i]-1)*(300/char_num))
     while j<(char_order[i]*(300/char_num)):
         pixel1[j]=(00, 221, 00)
-        pixel1[j+int(300/char_num)]=(221, 221, 0)
         j+=1
+
+    k=int((char_order[i])*(300/char_num))
+    while k<(char_order[i+1]*(300/char_num)):
+        pixel1[k]=(221, 221, 00)
+        k+=1
+
     pixel1.show()
     i+=1
+
     if i==char_num:
         i=0
 
