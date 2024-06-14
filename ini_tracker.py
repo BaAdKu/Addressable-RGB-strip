@@ -35,7 +35,7 @@ while True:
 
     pixel1.show()
     i+=1
-    print ("this is round number " + int(i/char_num +1) + "of the initiative", end="/r")
+    print ("this is round number " + str(int(i/char_num +1)) + "of the initiative", end="/r")
     # if i==char_num:
     #     i=0
 
