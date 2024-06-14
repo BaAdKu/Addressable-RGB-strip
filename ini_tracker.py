@@ -3,11 +3,11 @@ import board
 import neopixel
 
 pixel1=neopixel.NeoPixel(board.D18, 300, brightness=0.2, auto_write= False)
-char_num=int(input("Please enter the number of players "))
+char_num=int(input(f"Please enter the number of players "))
 i=0
 char_order=[0]*char_num
 while i<char_num:
-    print("enter the next person by their number", end="\r") 
+    print(f"enter the next person by their number", end="\r") 
     char_order[i]=int(input())
     i+=1
 
@@ -35,7 +35,7 @@ while True:
 
     pixel1.show()
     i+=1
-    print ("this is round number " + str(int(i/char_num +1)) + " of the initiative", end="\r")
+    print (f"this is round number " + str(int(i/char_num +1)) + " of the initiative", end="\r")
     # if i==char_num:
     #     i=0
 
