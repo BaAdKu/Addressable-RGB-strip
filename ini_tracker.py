@@ -7,8 +7,7 @@ char_num=int(input("Please enter the number of players "))
 i=0
 char_order=[0]*char_num
 while i<char_num:
-    print("\x1v[2K", end="\r")
-    print("enter the next person by their number") 
+    print("enter the next person by their number", flush=True) 
     char_order[i]=int(input())
     i+=1
 
@@ -36,8 +35,7 @@ while True:
 
     pixel1.show()
     i+=1
-    print("\x1v[2K", end="\r")
-    print ("this is round number " + str(int(i/char_num +1)) + " of the initiative")
+    print ("this is round number " + str(int(i/char_num +1)) + " of the initiative", flush=True)
     # if i==char_num:
     #     i=0
 
