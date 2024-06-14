@@ -28,8 +28,8 @@ while True:
         pixel1[j]=(00, 221, 00)
         j+=1
 
-    k=int((char_order[i%char_num])*(300/char_num))
-    while k<(char_order[i%char_num +1]*(300/char_num)):
+    k=int((char_order[(i+1)%char_num]-1)*(300/char_num))
+    while k<((char_order[(i+1)%char_num])*(300/char_num)):
         pixel1[k]=(221, 221, 00)
         k+=1
 
