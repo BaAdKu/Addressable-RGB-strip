@@ -9,10 +9,10 @@ with open('secrets.json', 'r') as file:
         client.subscribe(data['client_id'])
 
     def on_message(client, userdata, msg):
-        print(msg)
+        print(msg.payload)
     
     client=mqttclient.Client(mqttclient.CallbackAPIVersion.VERSION2)
-    client.username_pw_set(data['username'], data['broker'])
+    client.username_pw_set(data['username'], data['password'])
     client.on_connect=on_connect
     client.on_message= on_message
 
