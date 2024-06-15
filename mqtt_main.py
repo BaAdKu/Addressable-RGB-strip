@@ -11,7 +11,7 @@ with open('secrets.json', 'r') as file:
     def on_message(client, userdata, msg):
         print(msg)
     
-    client=paho.mqtt.Client(mqttclient.CallbackAPIVersion.VERSION2)
+    client=mqttclient.Client(mqttclient.CallbackAPIVersion.VERSION2)
     client.username_pw_set(data['username'], data['broker'])
     client.on_connect=on_connect
     client.on_message= on_message
