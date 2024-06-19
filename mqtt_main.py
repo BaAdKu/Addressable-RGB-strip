@@ -1,20 +1,29 @@
 import json
 import paho.mqtt.client as mqttclient
 import shooting_star
-shooting = shooting_star
+import timer
+import re
 
+shooting = shooting_star
+timer1 = timer
 with open('secrets.json', 'r') as file:
     data=json.load(file)
-
+    
     def on_connect(client, userdata, flags, reason_code, properties):
         print("connected with reason code: "+ str(reason_code))
         client.subscribe(data['client_id'])
 
     def on_message(client, userdata, msg):
+        message= str(msg.payload)
         print(msg.payload)
-        if "shootingstar" in str(msg.payload):
+        if "shootingstar" in message:
             print("shooting star!")
             shooting.shootingstar()
+        if "timer" in message:
+            print("timer starts")
+            time= int(re.search(r'\d+', message).group())
+            timer1.timer_start(time)
+
     
     client=mqttclient.Client(mqttclient.CallbackAPIVersion.VERSION2)
     client.username_pw_set(data['username'], data['password'])
