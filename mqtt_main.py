@@ -12,6 +12,7 @@ with open('secrets.json', 'r') as file:
     def on_message(client, userdata, msg):
         print(msg.payload)
         if "shootingstar" in str(msg.payload):
+            print("shooting star!")
             shooting_star
     
     client=mqttclient.Client(mqttclient.CallbackAPIVersion.VERSION2)
