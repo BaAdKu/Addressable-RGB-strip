@@ -30,4 +30,3 @@ def timer_start( sec):
 
     pixel1.fill((0,0,0))
 
-timer_start(pixel1)
