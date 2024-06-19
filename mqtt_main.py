@@ -2,10 +2,12 @@ import json
 import paho.mqtt.client as mqttclient
 import shooting_star
 import timer
+import rainbow
 import re
 
 shooting = shooting_star
 timer1 = timer
+rain=rainbow
 with open('secrets.json', 'r') as file:
     data=json.load(file)
     
@@ -23,6 +25,9 @@ with open('secrets.json', 'r') as file:
             print("timer starts")
             time= int(re.search(r'\d+', message).group())
             timer1.timer_start(time)
+        if "rainbow" in message:
+            print("rainbow")
+            rain.rainbow_cycle(0.001)
 
     
     client=mqttclient.Client(mqttclient.CallbackAPIVersion.VERSION2)
