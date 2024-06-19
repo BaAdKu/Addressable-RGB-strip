@@ -31,7 +31,7 @@ def shootingstar ():
         pixel1.show()
 
         # print("one step")
-        time.sleep(0.001)
+        time.sleep(0.0001)
 
     time.sleep(1)
     pixel1.fill((30, 0, 80))
