@@ -1,7 +1,7 @@
 import time
 import board # type: ignore
 import neopixel # type: ignore
-i
+
 
 pixel1=neopixel.NeoPixel(board.D18, 300, brightness=0.2, auto_write= False)
 i=0
