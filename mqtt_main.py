@@ -1,5 +1,6 @@
 import json
 import paho.mqtt.client as mqttclient
+import shooting_star
 
 with open('secrets.json', 'r') as file:
     data=json.load(file)
@@ -10,6 +11,8 @@ with open('secrets.json', 'r') as file:
 
     def on_message(client, userdata, msg):
         print(msg.payload)
+        if "shootingstar" in msg.payload:
+            shooting_star
     
     client=mqttclient.Client(mqttclient.CallbackAPIVersion.VERSION2)
     client.username_pw_set(data['username'], data['password'])
