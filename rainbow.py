@@ -55,7 +55,7 @@ def rainbow_cycle(wait):
             pixels.show()
             time.sleep(wait)
             k+=1
-            print(k)
+            # print(k)
             if k<=300:
                 break
 
