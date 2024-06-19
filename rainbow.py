@@ -46,6 +46,7 @@ def wheel(pos):
 
 
 def rainbow_cycle(wait):
+    k=0
     while k <300:
         for j in range(255):
             for i in range(num_pixels):
