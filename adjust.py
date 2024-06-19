@@ -13,7 +13,7 @@ thirtycolors=[(93, 138, 168), (255, 3, 62), (153, 102, 204), (164, 198, 57), (0,
 while i<=300:
     j=0
     while j<10:
-        pixel1[i+j]=thirtycolors[i/10]
+        pixel1[i+j]=thirtycolors[int(i/10)]
         j+=1
     i+=10
     pixel1.show()
