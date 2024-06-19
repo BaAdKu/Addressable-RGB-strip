@@ -55,6 +55,7 @@ def rainbow_cycle(wait):
             pixels.show()
             time.sleep(wait)
             k+=1
+            print(k)
     pixels.fill((30, 0, 80))
     pixels.show()
 
