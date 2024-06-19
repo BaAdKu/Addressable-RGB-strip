@@ -1,3 +1,2 @@
 #! /bin/bash
-echo "sudo python3 mqtt_main.py &"
-echo $sudo python3 mqtt_main.py &
+nohup sudo python3 mqtt_main.py 0>&- &>/dev/null &
