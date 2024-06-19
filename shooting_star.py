@@ -1,11 +1,11 @@
 import time
-import board
-import neopixel
+import board # type: ignore
+import neopixel # type: ignore
 
 pixel1=neopixel.NeoPixel(board.D18, 300, brightness=0.2, auto_write= False)
 
-x=0
 def shootingstar ():
+    x=0
     pixel1.fill((30, 0, 80))
     pixel1.show()
 
