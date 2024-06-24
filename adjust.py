@@ -17,4 +17,3 @@ while i<=300:
         j+=1
     i+=10
     pixel1.show()
-
