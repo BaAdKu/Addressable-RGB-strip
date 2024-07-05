@@ -1,15 +1,15 @@
 import time
-import board
-import neopixel
+import board # type: ignore
+import neopixel # type: ignore
 
 num_pixel=600
 
 pixel1=neopixel.NeoPixel(board.D18, num_pixel, brightness=0.2, auto_write= False)
 
-x=0
-
-pixel1.fill((30, 0, 80))
-pixel1.show()
+def shootingstar ():
+    x=0
+    pixel1.fill((30, 0, 80))
+    pixel1.show()
 
 while x<num_pixel: 
     pixel1[x]=(105, 85, 127)
@@ -32,11 +32,12 @@ while x<num_pixel:
     x+=1
     pixel1.show()
 
-    # print("one step")
-    time.sleep(0.004)
+        # print("one step")
+        time.sleep(0.001)
 
-time.sleep(4)
-pixel1.fill((30, 0, 80))
-input("press anything to continue")
-pixel1.fill((0,0,0))
-pixel1.show()
+    time.sleep(1)
+    pixel1.fill((30, 0, 80))
+    # input("press anything to continue")
+    time.sleep(1)
+    pixel1.fill((0,0,0))
+    pixel1.show()

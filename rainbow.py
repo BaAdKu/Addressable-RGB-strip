@@ -3,8 +3,8 @@
 
 # Simple test for NeoPixels on Raspberry Pi
 import time
-import board
-import neopixel
+import board # type: ignore
+import neopixel # type: ignore
 
 
 # Choose an open pin connected to the Data In of the NeoPixel strip, i.e. board.D18
@@ -46,22 +46,30 @@ def wheel(pos):
 
 
 def rainbow_cycle(wait):
-    for j in range(255):
-        for i in range(num_pixels):
-            pixel_index = (i * 256 // num_pixels) + j
-            pixels[i] = wheel(pixel_index & 255)
-        pixels.show()
-        time.sleep(wait)
+    k=0
+    while k <300:
+        for j in range(255):
+            for i in range(num_pixels):
+                pixel_index = (i * 256 // num_pixels) + j
+                pixels[i] = wheel(pixel_index & 255)
+            pixels.show()
+            time.sleep(wait)
+            k+=1
+            # print(k)
+            if k<=300:
+                break
+
+    pixels.fill((0, 0, 0))
+    pixels.show()
 
 
-while True:
+# while True:
     # Comment this line out if you have RGBW/GRBW NeoPixels
     # pixels.fill((255, 0, 0))
     # Uncomment this line if you have RGBW/GRBW NeoPixels
     # pixels.fill((255, 0, 0, 0))
     # pixels.show()
     # time.sleep(1)
-
     # Comment this line out if you have RGBW/GRBW NeoPixels
     # pixels.fill((0, 255, 0))
     # Uncomment this line if you have RGBW/GRBW NeoPixels
@@ -76,4 +84,4 @@ while True:
     # pixels.show()
     # time.sleep(1)
 
-    rainbow_cycle(0.001)  # rainbow cycle with 1ms delay per step
+    # rainbow_cycle(0.001)  # rainbow cycle with 1ms delay per step
