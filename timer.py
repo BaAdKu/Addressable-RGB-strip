@@ -25,13 +25,13 @@ def timer_start( sec):
         i+=1
         time.sleep(x)
 
-        i=0
-        while i<3:
-            pixel1.fill((255,0,0))
-            time.sleep(0.2)
-            pixel1.fill((0,0,0))
-            time.sleep(0.2)
-            i+=1
+    i=0
+    while i<3:
+        pixel1.fill((255,0,0))
+        time.sleep(0.2)
+        pixel1.fill((0,0,0))
+        time.sleep(0.2)
+        i+=1
 
     pixel1.fill((0,0,0))
 
