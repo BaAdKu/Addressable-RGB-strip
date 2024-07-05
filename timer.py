@@ -15,7 +15,7 @@ def timer_start( sec):
     print("one led every " + str(x) + " seconds")
 
     i=0
-    while i<300:
+    while i<pixelnum:
         pixel1[i]=(255, 255, 0)
         i+=1
         time.sleep(x)
@@ -33,11 +33,11 @@ def timer_start( sec):
             time.sleep(0.2)
             i+=1
 
-    i=0
-    while i<pixelnum:
-        pixel1[i]=(255, 0, 0)
-        i+=1
-        time.sleep(x)
+        i=0
+        while i<pixelnum:
+            pixel1[i]=(255, 0, 0)
+            i+=1
+            time.sleep(x)
 
-        pixel1.fill((0,0,0))
+    pixel1.fill((0,0,0))
 
