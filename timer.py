@@ -2,7 +2,7 @@ import time
 import board # type: ignore
 import neopixel # type: ignore
 
-pixelnum=600
+pixelnum=300
 pixel1=neopixel.NeoPixel(board.D18, pixelnum, brightness=0.2)
 
 def timer_start( sec):

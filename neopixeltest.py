@@ -2,13 +2,14 @@ import time
 import board
 import neopixel
 
-pixel1=neopixel.NeoPixel(board.D18, 300, brightness=0.2)
+num_pixel = 300
+pixel1=neopixel.NeoPixel(board.D18, num_pixel, brightness=0.2)
 
 x=0
 
 pixel1.fill((204, 0, 204))
 
-while x<300: 
+while x<num_pixel: 
     pixel1[x]=(102, 102, 255)
     pixel1[x-7]=(153, 153, 0)
     pixel1[x-21]= (255, 204, 204)
