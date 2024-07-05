@@ -33,11 +33,5 @@ def timer_start( sec):
             time.sleep(0.2)
             i+=1
 
-        i=0
-        while i<pixelnum:
-            pixel1[i]=(255, 0, 0)
-            i+=1
-            time.sleep(x)
-
     pixel1.fill((0,0,0))
 
