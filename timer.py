@@ -2,18 +2,19 @@ import time
 import board
 import neopixel
 
-pixel1=neopixel.NeoPixel(board.D18, 300, brightness=0.2)
+pixelnum=600
+pixel1=neopixel.NeoPixel(board.D18, pixelnum, brightness=0.2)
 
 pixel1.fill((20, 20, 20))
 
 timersecs = int(input())
 
-x=timersecs/300
+x=timersecs/pixelnum
 
 print("one led every " + str(x) + " seconds")
 
 i=0
-while i<300:
+while i<pixelnum:
     pixel1[i]=(255, 0, 0)
     i+=1
     time.sleep(x)
